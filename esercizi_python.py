@@ -86,6 +86,116 @@ dir('stringa')
 help('lower'.lower)
 
 
+################################
+# list comprehension esercizio
+##############################
+
+"""
+Data la stringa '33;91;77;15' generare la somma di tutti i numeri in esse contenuti
+divisi dal carattere ;
+Per farlo usiamo la sintassi List comprehension
+"""
+
+'33;91;77;15'
+
+sum([int(item) for item in '33;91;77;15'.split(';')])
+
+# funziona anche scrivendo il tutto senza parentesi perchè in questo
+#caso sarebbe un 'generator expression' 
+
+sum(int(item) for item in '33;91;77;15'.split(';'))
+
+
+###############################################
+###### ESPRESSIONI CONDIZIONALI
+#
+#<ESPRESSIONE 1> IF <TEST> ELSE <ESPRESSIONE2>
+################################################
+
+x = 'a' if 4 ==  2 + 2 else 'b'  # x è uguale a 
+x = 'a' if 4 ==  3 + 2 else 'b'  # x è uguale b
+
+
+######## CREARE UNO SWITCH CASE ###########
+
+def switch(codice):
+    d = {0: len, 1: min, 2: max }
+    return d.get(codice, sum)  # la funzione get ristorna il valore associato alla key "primo parametro"
+                              #oppure il valore di default "secondo parametro"
+switch(0)([1,2,3])  # len = 3
+switch(1)([5,9,1])  # min = 1
+switch(2)([5,9,1])  # max = 9
+switch(9)([5,9,1])  # sum = 15  (parametro di default)
+
+
+
+################# FOR CON ELSE ################
+# L'else viene eseguito se il ciclo è stato 
+# interrotto senza l'interruzione break.
+
+# NOTA: L'istruione else esiste anche per il ciclo while
+###########################################
+
+# Esempio con else eseguito
+
+for i in range(5):
+    print(i+1)
+    if i == 6:
+        break
+else:
+    print('else eseguito')
+
+# Esempio con else non eseguito perchè il
+#ciclo è interrotto da un break
+
+for i in range(10):
+    print(i+1)
+    if i+1 == 6:
+        break
+else:
+    print('else eseguito')
+
+
+#####################################################    
+#################### WHILE - break e continue #######
+#####################################################
+
+while True:
+    dati_utente = input('Digita qualcosa:  ')
+    if dati_utente == 'esci':
+        print('interrompo il ciclo')
+        break
+    elif (dati_utente == 'qqq'):
+        print('interrompo il blocco e continuo il ciclo')
+        continue
+    print(dati_utente)                
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
