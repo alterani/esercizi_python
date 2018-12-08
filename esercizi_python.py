@@ -171,8 +171,31 @@ while True:
     print(dati_utente)                
     
 
+################ COMIPILAZIONE DEI FILE ##############
+# Per questo esercizio ho creato un modulo da importare che si chiama
+# m.py
+######################################################
+    
+# quando un modulo viene importato pytho lo compila in automatio
+# e crea una sotto cartella __pycache__ ed all'interano di esse genera
+#il un file conestensone <nome_modulo>.cpython-<versione>.pyc che sarebbe il modilo 
+#compilato in binario. 
+# nel nostro caso ha creato la cartella __pycache__ ed all'interno il file m.cpython-37.pyc
+# è possibile eseguire direttamente il binario es: python __pycache__/m.cpython-37.pyc
+'''
+L'attributo magico __file__ contiene il nime ed il percorso del file del modulo importato
+L'attibito __cached__ è come __file__ ma si riferisce al file compilato
+'''    
 
+################## ATTRIBUTI MAGICI ###########
+'''
 
+__class__   Restituische il tipo di oggetto stessa info si ottiene con type(<oggetto>) 
+__file__    L'attributo magico __file__ contiene il nime ed il percorso del file del modulo importato
+__cached__ L'attibito __cached__ è come __file__ ma si riferisce al file compilato
+    
+''''
+    
 
 
 
